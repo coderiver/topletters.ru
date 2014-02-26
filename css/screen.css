@@ -19,8 +19,39 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-size: 12px; font-family: Arial, sans-serif; line-height: 1.4; }
+/*-------------------------  ------------------------- */
+/*------------------------- general ------------------------- */
+body { font-size: 14px; font-family: "MyriadPro", sans-serif; line-height: 1.4; }
 
+.out { width: 1130px; margin: 0 auto; padding: 20px 0 0; }
+
+/*------------------------- header ------------------------- */
+.header { padding: 0 13px; *zoom: 1; }
+.header:after { content: " "; display: table; clear: both; }
+
+.header-left { width: 330px; float: left; }
+
+.header-center { overflow: hidden; }
+.header-center .nav { margin-top: 19px; margin-left: 12px; }
+
+.header-right { width: 283px; float: right; text-align: right; font-size: 20px; line-height: 1.6; }
+
+.logo { display: inline-block; width: auto; text-decoration: none; font-size: 21px; line-height: 1; color: #333333; }
+.logo .h2 { margin-bottom: 5px; font-size: 50px; line-height: 1; }
+
+.logo__ico { margin-top: 5px; display: inline-block; vertical-align: top; background: url('../img/icons-sdc536d7eec.png') 0 0 no-repeat; width: 48px; height: 35px; }
+
+.logo__descr { margin-top: -4px; margin-left: 5px; display: inline-block; }
+
+.nav ul { *zoom: 1; }
+.nav ul:after { content: " "; display: table; clear: both; }
+.nav li { height: 15px; line-height: 15px; padding: 0 9px; float: left; border-left: 1px solid #333333; -webkit-box-shadow: -1px 0px 0 #d6d6d6; -moz-box-shadow: -1px 0px 0 #d6d6d6; box-shadow: -1px 0px 0 #d6d6d6; }
+.nav li:first-child { border-left: none; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+.nav a { text-decoration: none; color: #333333; }
+.nav a.is-active { color: #fe4e7b; }
+
+/*------------------------- footer ------------------------- */
+/*------------------------- page ------------------------- */
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l-col1 { float: left; width: 20%; }

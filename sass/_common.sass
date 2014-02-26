@@ -1,49 +1,71 @@
-// # SHORT HOWTO
-// ## Sprites
-//     .whatever
-//          +sized-sprite($icons, coderiver) //or
-// 			+s(codedby) //gets default value for spritemap as $icons
-// ### animation example
-//     +include keyframes(rotate)
-//        from
-//           +rotate(0)
-//        to
-//           +rotate(360)
-// ## animation usage
-//     body:hover
-// 	    +animation(rotate 200s linear infinite)
-// ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in)
-// ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
-//	   horizontal
-//     +gh(#232323, #5c5c5c);
-// ## making bw-images
-//     img
-//			@extend %gray
-// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
-//			display: none
-// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
-//
-// ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
-//			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
-//				display: none
-// ## fonts 
-// Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
-// =book
-// 	font-family: "book",arial,sans-serif 
-	
+/*-------------------------  -------------------------*/
+$black: #333
+
+/*------------------------- general -------------------------*/
 body
-	font-size: 12px 
-	font-family: Arial, sans-serif 
+	font-size: 14px 
+	font-family: 'MyriadPro', sans-serif 
 	line-height: 1.4
+.out
+	width: 1130px
+	margin: 0 auto
+	padding: 20px 0 0
+/*------------------------- header -------------------------*/
+.header
+	padding: 0 13px
+	+clr
+.header-left
+	width: 330px
+	float: left
+.header-center
+	overflow: hidden
+	.nav
+		margin-top: 19px
+		margin-left: 12px
+.header-right
+	width: 283px
+	float: right
+	text-align: right
+	font-size: 20px
+	line-height: 1.6 
+.logo
+	display: inline-block
+	width: auto
+	text-decoration: none
+	font-size: 21px
+	line-height: 1
+	color: $black
+	.h2
+		margin-bottom: 5px
+		font-size: 50px
+		line-height: 1
+.logo__ico	
+	margin-top: 5px
+	display: inline-block
+	vertical-align: top
+	+s(i-message)
+.logo__descr
+	margin-top: -4px
+	margin-left: 5px
+	display: inline-block
+.nav
+	ul
+		+clr
+	li
+		height: 15px
+		line-height: 15px
+		padding: 0 9px
+		float: left
+		border-left: 1px solid #333333
+		+box-shadow(-1px 0px 0 #d6d6d6)
+		&:first-child
+			border-left: none
+			+box-shadow(none)
+	a
+		text-decoration: none
+		color: $black
+		&.is-active
+			color: #fe4e7b
+/*------------------------- footer -------------------------*/
 
-
-// common blocks
+/*------------------------- page -------------------------*/
