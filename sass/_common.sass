@@ -1,6 +1,7 @@
 /*-------------------------  -------------------------*/
-$black: #333
 
+/*-------------------------  mixins & extend & var -------------------------*/
+$black: #333
 /*------------------------- general -------------------------*/
 body
 	font-size: 14px 
@@ -11,6 +12,10 @@ body
 .wrap
 	width: 1130px
 	margin: 0 auto
+.h1
+	font-size: 40px
+	font-weight: normal
+	color: $black
 /*------------------------- ico -------------------------*/
 .ico
 	display: inline-block
@@ -27,6 +32,38 @@ body
 	+s(i-ico5)
 .i-ico6
 	+s(i-ico6)
+/*------------------------- btn -------------------------*/
+.btn
+	display: inline-block
+	height: 40px
+	line-height: 40px
+	padding: 0 14px
+	text-transform: uppercase
+	color: #FFF
+	text-decoration: none
+	cursor: pointer
+	+transition(all linear 0.2s)
+	&:hover
+		+transition(all linear 0.2s)
+	&:active
+		position: relative
+		top: -1px
+.btn-red
+	background: #FF0042
+	font-weight: bold
+	@include box-shadow(2px 3px 1px rgba(80,42,92,.3))
+	&:hover
+		background: #ef0b46
+.btn_send 
+	width: 190px
+	margin: 28px auto 0
+	display: block
+	text-align: center
+.btn_downnload
+	width: 294px
+	margin: 0 auto 0
+	display: block
+	text-align: center
 /*------------------------- header -------------------------*/
 .header
 	padding: 0 13px
@@ -157,7 +194,6 @@ body
 	.label
 		margin-bottom: 50px
 .slider__item-2
-	// margin-top: -20px
 	.slider__title
 		margin-top: -10px
 	.label
@@ -177,42 +213,28 @@ body
 	color: #FFF
 	background-size: 100% 100%
 	+box
-// btn
-.btn
-	display: inline-block
-	height: 40px
-	line-height: 40px
-	padding: 0 14px
-	text-transform: uppercase
-	color: #FFF
-	text-decoration: none
-	+transition(all linear 0.2s)
-	&:hover
-		+transition(all linear 0.2s)
-	&:active
-		position: relative
-		top: -1px
-.btn-red
-	background: #FF0042
-	font-weight: bold
-	@include box-shadow(2px 3px 1px rgba(80,42,92,.3))
-	&:hover
-		background: #ef0b46
 // service
 .service
 	margin-top: 52px
+	margin-bottom: 33px
 	padding: 0 83px
-	.service__title
-		font-size: 40px
+	.h1
 		text-align: center
 		font-weight: normal
-		color: $black 
 	ul
 		margin-top: 38px
 		padding: 0 70px
 		+clr
 	li
 		float: left
+		position: relative
+		&:before
+			position: absolute
+			top: 0
+			left: 0
+	a
+		display: block
+		text-decoration: none
 	.service__meta
 		font-size: 16px
 		text-align: center
@@ -222,11 +244,12 @@ body
 .service__audit
 	width: 125px
 	margin-right: 35px
-	&:before
-		content: ""
-		display: inline-block
-		margin-left: 5px
-		+s(i-ico1)
+	a
+		&:before
+			content: ""
+			display: inline-block
+			margin-left: 5px
+			+s(i-ico1)
 	.service__meta
 		text-align: right
 		margin-right: 26px
@@ -234,56 +257,145 @@ body
 // 2
 .service__dev
 	margin-right: 45px
-	&:before
-		content: ""
-		display: inline-block
-		margin-left: 20px
-		+s(i-ico2)
+	a
+		&:before
+			content: ""
+			display: inline-block
+			margin-left: 20px
+			+s(i-ico2)
 	.service__meta
 		margin-top: 6px
 // 3
 .service__letter
 	margin-right: 52px
-	&:before
-		content: ""
-		display: inline-block
-		margin-left: 14px
-		+s(i-ico3)
+	a
+		&:before
+			content: ""
+			display: inline-block
+			margin-left: 14px
+			+s(i-ico3)
 	.service__meta	
 		margin-top: 3px
 // 4
 .service__base
 	margin-right: 34px
-	&:before
-		content: ""
-		display: inline-block
-		margin-top: 8px
-		+s(i-ico4)
+	a
+		&:before
+			content: ""
+			display: inline-block
+			margin-top: 8px
+			+s(i-ico4)
 	.service__meta	
 		margin-top: 12px
 		margin-left: 7px
 // 5
-.service__automation 
-	&:before
-		content: ""
-		display: inline-block
-		margin-top: 8px
-		margin-left: 17px
-		+s(i-ico5)
+.service__automation
+	a
+		&:before
+			content: ""
+			display: inline-block
+			margin-top: 8px
+			margin-left: 17px
+			+s(i-ico5)
 	.service__meta
 		margin-top: 12px
 // 6
 .service__integration 
-	&:before
-		content: ""
-		display: inline-block
-		margin-left: 34px
-		+s(i-ico6)
+	a
+		&:before
+			content: ""
+			display: inline-block
+			margin-left: 34px
+			+s(i-ico6)
 	.service__meta
 		margin-top: 4px
 		margin-left: 32px
 
-
+// service-detail
+.service-detail
+.service-detail__item
+	width: 595px
+	margin-left: 75px
+	margin-right: 75px
+	padding: 40px 30px 20px
+	background: #E6E6E6 
+	position: relative
+	ul
+	li
+		margin-bottom: 10px
+		padding-left: 42px
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			left: 20px
+			top: 3px
+			+s(i-list)
+.service-detail__title
+	font-size: 25px
+	font-weight: normal
+	margin-bottom: 15px
+.service-detail__item-1
+	&:before
+		content: ""
+		+arr(27,31, #e6e6e6, bl)
+		position: absolute
+		top: -27px
+		left: 50px
+.service-detail__item-2
+	margin-left: 225px
+	&:before
+		content: ""
+		+arr(27,31, #e6e6e6, bl)
+		position: absolute
+		top: -27px
+		left: 50px
+.service-detail__item-3
+	margin-left: 250px
+	&:before
+		content: ""
+		+arr(31,27, #e6e6e6, t)
+		position: absolute
+		top: -27px
+		left: 235px
+.service-detail__item-4
+	margin-left: 300px
+	&:before
+		content: ""
+		+arr(31,27, #e6e6e6, t)
+		position: absolute
+		top: -27px
+		left: 365px
+.service-detail__item-5
+	margin-left: 375px
+	&:before
+		content: ""
+		+arr(27,31, #e6e6e6, br)
+		position: absolute
+		top: -31px
+		left: 430px
+.service-detail__item-6
+	margin-left: 425px
+	&:before
+		content: ""
+		+arr(27,31, #e6e6e6, br)
+		position: absolute
+		top: -31px
+		left: 530px
+// benefits
+.benefits
+	max-width: 1366px
+	height: 702px
+	margin: 60px auto 0
+	background: url(../img/benefits-bg.jpg) 0 0 no-repeat
+	+cover
+	background-size: 100% 100%
+	color: #fff 
+	.h1
+		color: #FFF
+		text-align: center
+.benefits-i
+	padding: 66px 190px 0
 
 
 
