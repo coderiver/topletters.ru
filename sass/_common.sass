@@ -60,12 +60,21 @@ body
 	+s(i-ico42)
 .i-ico43
 	+s(i-ico43)
-.i-ico44
+.i-ico44 
 	+s(i-ico44)
 .i-ico45
 	+s(i-ico45)
 .i-ico46
 	+s(i-ico46)
+
+.i-ico51
+	+s(i-ico51)
+.i-ico52
+	+s(i-ico52)
+.i-ico53
+	+s(i-ico53)
+.i-ico54
+	+s(i-ico54)
 
 .i-lupa
 	+s(i-lupa)
@@ -135,6 +144,34 @@ body
 	&:focus
 		border: 1px solid #ff0066
 		+transition(all linear 0.2s)
+.input_popup
+	width: 100%
+	height: 48px
+	padding: 3px 10px 3px 50px
+	line-height: 1px
+	background: #5F3F5F
+	position: relative
+	color: #A5ADBE
+	font-size: 15px
+	@include box-shadow(none)
+	+border-radius(2px)
+	+box
+	+placeholder
+		color: #A5ADBE
+		line-height: 1
+		font-size: 15px
+	&:before
+		content: ""
+		position: absolute
+	&:hover
+		@include box-shadow(none)
+	&:focus
+		background: #fff 
+		border: 1px solid #2f1b35
+		@include box-shadow(inset 0px -2px 0px #b14ecd)
+		color: #434A5C
+		+placeholder
+			color: #434A5C
 .textarea
 	width: 576px
 	min-height: 119px
@@ -557,14 +594,13 @@ body
 		+s(i-ico21)	
 // 2
 .benefits__progect
-	margin-right: 135px
-	&:before
-		+s(i-ico22)
+	margin-right: 135px 
+	&:before 
+		+s(i-ico22) 
 // 3
 .benefits__investments
-	margin-right: 113px
+	margin-right: 113px 
 	&:before
-		margin-right: 12px
 		+s(i-ico23)
 // 4
 .benefits__testing
@@ -833,18 +869,19 @@ body
 	&.is-active
 		opacity: 1
 		z-index: 1000
+
 // popup
 .popup
 	position: fixed
-	width: 420px  
-	height: 400px
+	width: 560px  
+	height: 370px
 	left: 50%
 	top: 50%
-	margin-left: -210px
+	margin-left: -280px
 	margin-top: -200px
 	z-index: -1
 	opacity: 0
-	background-color: #dae3e7
+	background-color: #321d39
 	border-radius: 5px
 	+transform(translate3d(0,-700px,0))
 	+transition(all .3s ease-in)
@@ -854,17 +891,83 @@ body
 		+transform(translate3d(0,0,0))
 	.popup-i
 		position: relative
-		padding: 15px
-	.popup__close
-		position: absolute
-		top: -25px
-		right: -30px
-		&:hover
-			cursor: pointer
+		padding: 15px 40px
 	.popup__title
-		color: #c71b31
-		line-height: 1.2
-		margin-top: 0 
+		margin-top: 0
+		margin-bottom: 20px
+		color: #fff
+		text-align: center
+	.popup__row 
+		margin-bottom: 10px
+		position: relative
+		.ico
+			position: absolute
+	.popup__send
+		width: 100%
+		height: 66px
+		line-height: 66px
+		display: block
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 15px
+		background: #482950 
+		font-size: 15px
+		text-decoration: none
+		text-transform: uppercase
+		text-align: center
+		color: #FFF
+		+border-radius(0 0 5px 5px)
+		+transition(all .2s ease-in)
+		&:hover
+			background: #723f7d
+			+transition(all .2s ease-in)
+.popup-name
+	.i-ico51
+		top: 11px
+		left: 21px
+.popup-tel
+	.i-ico52
+		top: 12px
+		left: 17px
+.popup-mail
+	.i-ico53
+		top: 12px
+		left: 17px
+.popup-site
+	.i-ico54
+		top: 12px
+		left: 17px
+.popup__form
+	height: 355px
+	&.is-hide
+		display: none
+.popup__sucess 
+	height: 355px
+	display: none
+	position: relative
+	&.is-active
+		display: block
+	&:before
+		content: ""
+		position: absolute
+		top: 50px
+		left: 50%
+		margin-left: -64px
+		+s(i-sucess)
+	.popup__send 
+		width: auto
+		bottom: 0
+		left: -40px
+		right: -40px
+	.popup__sucess-info
+		padding-top: 185px
+		font-size: 22px
+		text-align: center
+		color: #FFF
+	
+
+	
 
 
 

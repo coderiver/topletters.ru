@@ -27,9 +27,21 @@ $(document).ready(function() {
 		$('.overlay').addClass('is-active');
 		return false;
 	});
-	$('.popup__close, .overlay').click(function(event) {
+	$('.overlay').click(function(event) {
 		$('.popup').removeClass('is-active');
 		$('.overlay').removeClass('is-active');
 		return false;
+	});
+	// 
+	$('.js-send').click(function(event) {
+		$(this).parents().find(".popup__form").hide();
+		$(this).parents().find(".popup__sucess").show();
+	});
+	// 
+	$('.js-close').click(function(event) {
+		$('.popup').removeClass('is-active');
+		$('.overlay').removeClass('is-active');
+		$(this).parents().find(".popup__form").show();
+		$(this).parents().find(".popup__sucess").hide();
 	});
 });
