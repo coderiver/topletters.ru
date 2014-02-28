@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	// tab
 	function tab() {
 	     $(".js-tab").each(function(){
 	       var tab_link = $(this).find("a");
@@ -18,4 +19,6 @@ $(document).ready(function() {
 	     });
 	}
 	tab();
+	// fancybox
+	$('.fancybox').fancybox();
 });

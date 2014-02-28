@@ -66,6 +66,9 @@ body
 	+s(i-ico45)
 .i-ico46
 	+s(i-ico46)
+
+.i-lupa
+	+s(i-lupa)
 /*------------------------- btn -------------------------*/
 .btn
 	display: inline-block
@@ -805,10 +808,17 @@ body
 		position: relative
 		&:first-child
 			margin-left: 0
+		&:hover
+			.i-lupa
+				display: block
 		img
 			+border-radius(5px)
-
-
+		.i-lupa
+			display: none
+			position: absolute
+			bottom: 11px
+			left: 50%
+			margin-left: -12px
 
 
 
