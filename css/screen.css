@@ -277,7 +277,7 @@ body { font-size: 14px; font-family: "MyriadPro", sans-serif; line-height: 1.4; 
 
 .benefits__testing:before { background: url('../img/icons-sc255c32521.png') 0 -3026px no-repeat; width: 116px; height: 116px; }
 
-.benefits__support { margin-right: 135px; }
+.benefits__support { margin-right: 125px; }
 .benefits__support:before { background: url('../img/icons-sc255c32521.png') 0 -2603px no-repeat; width: 116px; height: 116px; }
 
 .benefits__idea:before { background: url('../img/icons-sc255c32521.png') 0 -2148px no-repeat; width: 117px; height: 116px; }
