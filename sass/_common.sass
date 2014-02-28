@@ -12,10 +12,17 @@ body
 .wrap
 	width: 1130px
 	margin: 0 auto
-.h1
+.h3
 	font-size: 40px
 	font-weight: normal
 	color: $black
+.h4
+	font-size: 20px
+	font-weight: normal
+	color: $black
+.questions
+	margin-bottom: 40px
+	text-align: center
 /*------------------------- ico -------------------------*/
 .ico
 	display: inline-block
@@ -32,6 +39,19 @@ body
 	+s(i-ico5)
 .i-ico6
 	+s(i-ico6)
+
+.i-ico31
+	+s(i-ico31)
+.i-ico32
+	+s(i-ico32)
+.i-ico33
+	+s(i-ico33)
+.i-ico34
+	+s(i-ico34)
+.i-ico35
+	+s(i-ico35)
+.i-ico36
+	+s(i-ico36)
 /*------------------------- btn -------------------------*/
 .btn
 	display: inline-block
@@ -298,7 +318,7 @@ body
 	margin-top: 52px
 	margin-bottom: 33px
 	padding: 0 83px
-	.h1
+	.h3
 		text-align: center
 		font-weight: normal
 	ul
@@ -471,7 +491,7 @@ body
 	+cover
 	background-size: 100% 100%
 	color: #fff 
-	.h1
+	.h3
 		color: #FFF
 		text-align: center
 	ul
@@ -521,6 +541,80 @@ body
 .benefits__idea
 	&:before
 		+s(i-ico26)
+
+// team
+.team
+	width: 1012px
+	margin: 0 auto 60px
+	overflow: hidden
+	color: $black 
+.team__title
+	margin-bottom: 20px
+	position: relative
+	span
+		display: inline-block
+		padding-right: 20px
+		&:before
+			content: ""
+			width: 100%
+			height: 1px
+			background: #767676 
+			position: absolute
+			top: 28px
+			left: 300px
+			right: 0
+.team__note
+	margin-bottom: 25px
+.team__in
+	+clr
+.team__fio
+	width: 229px
+	float: left
+	li
+		&.is-active
+			a
+				background: #eae6ec
+	a
+		display: block
+		width: 205px
+		padding: 6px 0 6px 3px
+		background: #fff 
+		+border-radius(3px)
+		text-decoration: none
+		font-size: 20px
+		color: $black
+	.team__fio-ico
+		width: 44px
+		display: inline-block
+		text-align: center
+.team__about
+	width: 690px
+	float: left
+.team__about-photo
+	margin-right: 35px
+	padding: 0 45px
+	float: left
+	border-left: 1px solid $black
+	border-right: 1px solid $black
+	.h4
+		margin-bottom: 15px
+	.team__about-media
+		width: 170px
+		height: 177px
+		overflow: hidden
+		a
+			display: block
+		img
+			width: 100%
+.team__about-think 
+	overflow: hidden
+	.h4
+		margin-bottom: 25px
+
+	
+
+
+
 
 
 
