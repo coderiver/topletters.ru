@@ -21,4 +21,15 @@ $(document).ready(function() {
 	tab();
 	// fancybox
 	$('.fancybox').fancybox();
+	// popup
+	$('.js-popup').click(function(event) {
+		$('.popup').addClass('is-active');
+		$('.overlay').addClass('is-active');
+		return false;
+	});
+	$('.popup__close, .overlay').click(function(event) {
+		$('.popup').removeClass('is-active');
+		$('.overlay').removeClass('is-active');
+		return false;
+	});
 });
