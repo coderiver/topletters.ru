@@ -102,7 +102,7 @@ body
 		background: #ef0b46
 .btn_send 
 	width: 190px
-	margin: 28px auto 0
+	margin: 18px auto 0
 	display: block
 	text-align: center
 .btn_download
@@ -490,6 +490,8 @@ body
 
 // service-detail
 .service-detail
+	p
+		margin-bottom: 10px
 .service-detail__item
 	width: 595px
 	margin-left: 75px
@@ -651,16 +653,21 @@ body
 	a
 		display: block
 		width: 205px
-		padding: 6px 0 6px 3px
+		padding: 6px 6px 6px 3px
 		background: #fff 
 		+border-radius(3px)
 		text-decoration: none
 		font-size: 20px
 		color: $black
+		+clr
 	.team__fio-ico
 		width: 44px
-		display: inline-block
+		float: left
 		text-align: center
+	.team__fio-i 
+		width: 160px
+		float: left
+	
 .team__about
 	width: 690px
 	float: left
@@ -674,7 +681,7 @@ body
 		margin-bottom: 15px
 	.team__about-media
 		width: 170px
-		height: 177px
+		// height: 177px
 		overflow: hidden
 		a
 			display: block
@@ -684,6 +691,8 @@ body
 	overflow: hidden
 	.h4
 		margin-bottom: 25px
+	p
+		margin-bottom: 10px
 
 // how-work
 .how-work 

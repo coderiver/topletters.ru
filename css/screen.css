@@ -91,7 +91,7 @@ body { font-size: 14px; font-family: "MyriadPro", sans-serif; line-height: 1.4; 
 .btn-red { background: #ff0042; font-weight: bold; -webkit-box-shadow: 2px 3px 1px rgba(80, 42, 92, 0.3); -moz-box-shadow: 2px 3px 1px rgba(80, 42, 92, 0.3); box-shadow: 2px 3px 1px rgba(80, 42, 92, 0.3); }
 .btn-red:hover { background: #ef0b46; }
 
-.btn_send { width: 190px; margin: 28px auto 0; display: block; text-align: center; }
+.btn_send { width: 190px; margin: 18px auto 0; display: block; text-align: center; }
 
 .btn_download { width: 267px; margin: 0 auto 0; display: block; text-align: center; }
 
@@ -234,6 +234,8 @@ body { font-size: 14px; font-family: "MyriadPro", sans-serif; line-height: 1.4; 
 .service__integration a:before { content: ""; display: inline-block; margin-left: 34px; background: url('../img/icons-sc255c32521.png') 0 -654px no-repeat; width: 116px; height: 80px; }
 .service__integration .service__meta { margin-top: 4px; margin-left: 32px; }
 
+.service-detail p { margin-bottom: 10px; }
+
 .service-detail__item { width: 595px; margin-left: 75px; margin-right: 75px; padding: 40px 30px 20px; background: #e6e6e6; position: relative; }
 .service-detail__item li { margin-bottom: 10px; padding-left: 42px; position: relative; }
 .service-detail__item li:before { content: ""; position: absolute; left: 20px; top: 3px; background: url('../img/icons-sc255c32521.png') 0 -3275px no-repeat; width: 20px; height: 13px; }
@@ -295,19 +297,22 @@ body { font-size: 14px; font-family: "MyriadPro", sans-serif; line-height: 1.4; 
 
 .team__fio { width: 229px; float: left; }
 .team__fio li.is-active a { background: #eae6ec; }
-.team__fio a { display: block; width: 205px; padding: 6px 0 6px 3px; background: white; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; text-decoration: none; font-size: 20px; color: #333333; }
-.team__fio .team__fio-ico { width: 44px; display: inline-block; text-align: center; }
+.team__fio a { display: block; width: 205px; padding: 6px 6px 6px 3px; background: white; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; text-decoration: none; font-size: 20px; color: #333333; *zoom: 1; }
+.team__fio a:after { content: " "; display: table; clear: both; }
+.team__fio .team__fio-ico { width: 44px; float: left; text-align: center; }
+.team__fio .team__fio-i { width: 160px; float: left; }
 
 .team__about { width: 690px; float: left; }
 
 .team__about-photo { margin-right: 35px; padding: 0 45px; float: left; border-left: 1px solid #333333; border-right: 1px solid #333333; }
 .team__about-photo .h4 { margin-bottom: 15px; }
-.team__about-photo .team__about-media { width: 170px; height: 177px; overflow: hidden; }
+.team__about-photo .team__about-media { width: 170px; overflow: hidden; }
 .team__about-photo .team__about-media a { display: block; }
 .team__about-photo .team__about-media img { width: 100%; }
 
 .team__about-think { overflow: hidden; }
 .team__about-think .h4 { margin-bottom: 25px; }
+.team__about-think p { margin-bottom: 10px; }
 
 .how-work-i { margin-left: 51px; }
 
