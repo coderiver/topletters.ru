@@ -205,7 +205,7 @@ body { font-size: 14px; font-family: "MyriadPro", sans-serif; line-height: 1.4; 
 
 .service { margin-top: 52px; margin-bottom: 33px; padding: 0 83px; }
 .service .h3 { text-align: center; font-weight: normal; }
-.service ul { margin-top: 38px; padding: 0 70px; *zoom: 1; }
+.service ul { margin-top: 38px; padding: 0 65px; *zoom: 1; }
 .service ul:after { content: " "; display: table; clear: both; }
 .service li { float: left; position: relative; }
 .service li:before { position: absolute; top: 0; left: 0; }
