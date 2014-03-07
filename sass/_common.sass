@@ -433,6 +433,7 @@ body
 		margin-top: 2px
 // 2
 .service__dev
+	width: 162px
 	margin-right: 45px
 	a
 		&:before
@@ -444,6 +445,7 @@ body
 		margin-top: 6px
 // 3
 .service__letter
+	width: 130px
 	margin-right: 52px
 	a
 		&:before
@@ -455,6 +457,7 @@ body
 		margin-top: 3px
 // 4
 .service__base
+	width: 122px
 	margin-right: 34px
 	a
 		&:before
@@ -467,6 +470,7 @@ body
 		margin-left: 7px
 // 5
 .service__automation
+	width: 114px
 	a
 		&:before
 			content: ""
@@ -477,7 +481,8 @@ body
 	.service__meta
 		margin-top: 12px
 // 6
-.service__integration 
+.service__integration
+	width: 157px
 	a
 		&:before
 			content: ""
@@ -590,31 +595,37 @@ body
 .benefits-i
 	padding: 66px 190px 0
 // 1
-.benefits__design 
+.benefits__design
+	width: 124px
 	margin-right: 147px
 	&:before
 		+s(i-ico21)	
 // 2
 .benefits__progect
+	width: 134px
 	margin-right: 135px 
 	&:before 
 		+s(i-ico22) 
 // 3
 .benefits__investments
+	width: 162px
 	margin-right: 113px 
 	&:before
 		+s(i-ico23)
 // 4
 .benefits__testing
+	width: 130px
 	&:before
 		+s(i-ico24)
 // 5
 .benefits__support
+	width: 170px
 	margin-right: 125px
 	&:before
 		+s(i-ico25)
 // 6
 .benefits__idea
+	width: 146px
 	&:before
 		+s(i-ico26)
 
@@ -898,6 +909,10 @@ body
 		opacity: 1
 		z-index: 1001
 		+transform(translate3d(0,0,0))
+	&.popup_download
+		height: 320px
+		.popup__send
+			bottom: 65px
 	.popup-i
 		position: relative
 		padding: 15px 40px
@@ -964,6 +979,7 @@ body
 		left: 50%
 		margin-left: -64px
 		+s(i-sucess)
+		z-index: 333
 	.popup__send 
 		width: auto
 		bottom: 0
