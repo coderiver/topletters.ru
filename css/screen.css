@@ -374,8 +374,8 @@ body { font-size: 14px; font-family: "MyriadPro", sans-serif; line-height: 1.4; 
 .overlay { position: fixed; top: 0; right: 0; bottom: 0; left: 0; background: rgba(0, 0, 0, 0.7); z-index: -1; opacity: 0; -webkit-transition: all 0.3s linear; -moz-transition: all 0.3s linear; -o-transition: all 0.3s linear; transition: all 0.3s linear; }
 .overlay.is-active { opacity: 1; z-index: 1000; }
 
-.popup { position: fixed; width: 560px; height: 370px; left: 50%; top: 50%; margin-left: -280px; margin-top: -200px; z-index: -1; opacity: 0; background-color: #321d39; border-radius: 5px; -webkit-transform: translate3d(0, -700px, 0); -moz-transform: translate3d(0, -700px, 0); -ms-transform: translate3d(0, -700px, 0); -o-transform: translate3d(0, -700px, 0); transform: translate3d(0, -700px, 0); -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; -o-transition: all 0.3s ease-in; transition: all 0.3s ease-in; }
-.popup.is-active { opacity: 1; z-index: 1001; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+.popup { position: fixed; width: 560px; height: 370px; left: 50%; top: 50%; margin-left: -280px; margin-top: -200px; z-index: -1; opacity: 0; background-color: #321d39; border-radius: 5px; -webkit-transition: all 0.2s ease-in; -moz-transition: all 0.2s ease-in; -o-transition: all 0.2s ease-in; transition: all 0.2s ease-in; }
+.popup.is-active { opacity: 1; z-index: 1001; -webkit-transition: all 0.2s ease-in; -moz-transition: all 0.2s ease-in; -o-transition: all 0.2s ease-in; transition: all 0.2s ease-in; }
 .popup.popup_download { height: 320px; }
 .popup.popup_download .popup__send { bottom: 65px; }
 .popup .popup-i { position: relative; padding: 15px 40px; }
@@ -401,6 +401,9 @@ body { font-size: 14px; font-family: "MyriadPro", sans-serif; line-height: 1.4; 
 .popup__sucess:before { content: ""; position: absolute; top: 50px; left: 50%; margin-left: -64px; background: url('../img/icons-sc255c32521.png') 0 -1379px no-repeat; width: 128px; height: 119px; z-index: 333; }
 .popup__sucess .popup__send { width: auto; bottom: 0; left: -40px; right: -40px; }
 .popup__sucess .popup__sucess-info { padding-top: 185px; font-size: 22px; text-align: center; color: white; }
+
+.js-tab-cont { display: none; }
+.js-tab-cont.is-show { display: block; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }

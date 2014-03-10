@@ -892,6 +892,7 @@ body
 
 // popup
 .popup
+	// display: none
 	position: fixed
 	width: 560px  
 	height: 370px
@@ -903,12 +904,12 @@ body
 	opacity: 0
 	background-color: #321d39
 	border-radius: 5px
-	+transform(translate3d(0,-700px,0))
-	+transition(all .3s ease-in)
+	+transition(all .2s ease-in)
 	&.is-active
+		// display: block
 		opacity: 1
 		z-index: 1001
-		+transform(translate3d(0,0,0))
+		+transition(all .2s ease-in)
 	&.popup_download
 		height: 320px
 		.popup__send
@@ -991,6 +992,10 @@ body
 		text-align: center
 		color: #FFF
 	
+.js-tab-cont
+	display: none
+	&.is-show
+		display: block
 
 	
 

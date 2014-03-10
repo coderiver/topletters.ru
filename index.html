@@ -6,7 +6,7 @@
 	<title>Template</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
-	<link rel="stylesheet" media="screen" href="css/jquery.fancybox.css" >
+	<link rel="stylesheet" media="screen" href="css/jquery.fancybox.css">
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery.tools.min.js"></script>
@@ -19,7 +19,7 @@
 <!-- BEGIN  out-->
 <div class="out">
 	<div class="overlay"></div>
-	<div class="popup popup_form">
+	<div class="popup popup_send">
 		<div class="popup-i">
 			<div class="popup__form">
 				<h2 class="popup__title">Начнем работу</h2>
@@ -71,7 +71,7 @@
 						<input type="text" class="input input_popup input_name" placeholder="Ваш сайт" name="site">
 						<i class="ico i-ico54"></i>
 					</div>
-					<a href="TopLetters.pdf" class="popup__send">СКАЧАТЬ</a>
+					<a href="download.php?url=TopLetters.pdf" rel="noindex" class="popup__send">СКАЧАТЬ</a>
 				</div>
 			</div>
 		</div>
@@ -114,7 +114,7 @@
 					<div class="slider__info">
 						<div class="label">Узнайте на что обратить внимание в первую очередь.</div>
 						<div class="slider__advice">
-							<a href="#" class="btn btn-red js-popup">РЕшить проблему</a>
+							<a href="#" class="btn btn-red js-popup js-popup_form">РЕшить проблему</a>
 							<span class="slider__advice-note">*Бесплатно</span>
 						</div>
 					</div>
@@ -124,7 +124,7 @@
 					<div class="slider__info">
 						<div class="label">Узнайте на что обратить внимание в первую очередь. Уникальная возможность не допустить ошибок!</div>
 						<div class="slider__advice">
-							<a href="#" class="btn btn-red js-popup">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+							<a href="#" class="btn btn-red js-popup js-popup_form">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
 							<span class="slider__advice-note">*Бесплатно</span> 
 						</div>
 					</div>
@@ -204,7 +204,7 @@
 					<li>В итоговом отчете вы увидите оценку своих E-mail маркетинговых процессов и советы по устранению «слабых» мест. Вы также можете задать специалистам компании конкретные вопросы, на которые хотели бы получить ответ.</li>
 				</ul>
 				<p><i>Плюсы и минусы емейл-рассылки не всегда очевидны для ее владельцев. Закажите профессиональную оценку качества рассылки и рекомендации по ее улучшению.</i></p>
-				<div class="btn btn-red btn_send js-popup">оставить заявку</div>
+				<div class="btn btn-red btn_send js-popup js-popup_form">оставить заявку</div>
 			</div>
 			<div class="service-detail__item service-detail__item-2 js-tab-cont js-tab2">
 				<h3 class="service-detail__title">E-mail маркетинг под ключ</h3>
@@ -219,7 +219,7 @@
 					<li>Оптимизацию рассыло</li>
 				</ul>
 				<p>Вам нужно что-то еще? Это мы тоже делаем! Под ключ.</p>
-				<div class="btn btn-red btn_send js-popup">оставить заявку</div>
+				<div class="btn btn-red btn_send js-popup js-popup_form">оставить заявку</div>
 			</div>
 			<div class="service-detail__item service-detail__item-3 js-tab-cont js-tab3">
 				<h3 class="service-detail__title">Создание письма</h3>
@@ -232,7 +232,7 @@
 					<li>Верстальщик, который дизайн превратит в полноценное письмо. Проследит, чтобы ваше письмо открылось во всех браузерах и почтовых клиентах, а также проверит, что письмо корректно отображается на всех мобильных устройствах.</li>
 				</ul>
 				<p>В итоге над вашим письмом поработают четыре профессионала своего дела и только при таком условие вы получаете письмо, которое открывают, читают, которое улучшает доверие к вам и клиента ничего не остается, как сделать заказ.</p>
-				<div class="btn btn-red btn_send js-popup">оставить заявку</div>
+				<div class="btn btn-red btn_send js-popup js-popup_form">оставить заявку</div>
 			</div>
 			<div class="service-detail__item service-detail__item-4 js-tab-cont js-tab4">
 				<h3 class="service-detail__title">Работа с базой подписчиков</h3>
@@ -246,7 +246,7 @@
 					<li>Возвращаем пользователей, которые утратили интерес.</li>
 				</ul>
 				<p>Результат нашей работы: Эффективно сегментированная база, которая увеличит доходность от E-mail маркетинга в несколько раз, за счет целевой рассылки каждому сегменту. </p>
-				<div class="btn btn-red btn_send js-popup">оставить заявку</div>
+				<div class="btn btn-red btn_send js-popup js-popup_form">оставить заявку</div>
 			</div>
 			<div class="service-detail__item service-detail__item-5 js-tab-cont js-tab5">
 				<h3 class="service-detail__title">Автоматизация и сегментация рассылки</h3>
@@ -259,7 +259,7 @@
 					<li>Как персонализировать рассылку?</li>
 				</ul>
 				<p>Список этих вопросов можно продолжить. Никто лучше вас не знает предпочтений и интересов вашей целевой аудитории, никто лучше вас не знает маркетинговых планов вашей компании, но именно в сочетании с профессиональными знаниями опытных специалистов в области емейл-маркетинга они могут и должны превратить емейл-рассылку в эффективный канал коммуникации с пользователем.</p>
-				<div class="btn btn-red btn_send js-popup">оставить заявку</div>
+				<div class="btn btn-red btn_send js-popup js-popup_form">оставить заявку</div>
 			</div>
 			<div class="service-detail__item service-detail__item-6 js-tab-cont js-tab6">
 				<h3 class="service-detail__title">API интеграция с CRM</h3>
@@ -271,7 +271,7 @@
 					<li>Полная интеграция email-маркетинга с вашим бизнесом позволит вам понимать ROI данного канала, и его значение вас приятно удивит!</li>
 				</ul>
 				<p>А вы знаете, что всего 7% компаний в России имеют полностью интегрированный в бизнес email-маркетинг? Хотите быть среди лидеров? </p>
-				<div class="btn btn-red btn_send js-popup">оставить заявку</div>
+				<div class="btn btn-red btn_send js-popup js-popup_form">оставить заявку</div>
 			</div>
 		</div>
 		<!-- / .service-detail -->
@@ -352,14 +352,14 @@
 									<i class="ico i-ico42"></i>
 									<div class="how-work__item-descr">
 										<div class="how-work__item-title">Пишем тексты</div>
-										<p>Написание работающих текстов. <br> Создание эффективных триггеров.</p>
+										<p>Придумаем заголовки, которые невозможно не открыть. Написание текстов по техникам AIDA, PMHS.</p>
 									</div>
 								</div>
 								<div class="how-work__item how-work__item_50 how-work__item-2">
 									<i class="ico i-ico43"></i>
 									<div class="how-work__item-descr">
 										<div class="how-work__item-title">Дизайн</div>
-										<p>Создание индивидуального <br>дизайна шаблона.</p>
+										<p>Создание индивидуального дизайна ваших писем.</p>
 									</div>
 								</div>
 								<div class="how-work__item how-work__item_50 how-work__item-3">
@@ -373,7 +373,7 @@
 									<i class="ico i-ico45"></i>
 									<div class="how-work__item-descr">
 										<div class="how-work__item-title">Делаем рассылку</div>
-										<p>Получившееся письмо готово к рассылке!</p>
+										<p>Сегментируем базу подписчиков и настраиваем платформу для рассылки.</p>
 									</div>
 								</div>
 							</div>
@@ -389,7 +389,7 @@
 									<i class="ico i-ico46"></i>
 									<div class="how-work__item-descr">
 										<div class="how-work__item-title">Прибыль</div>
-										<p>Больше прибыли, лидов, вернувшихся <br> покупателей, заявок, заказов</p>
+										<p>Эффективный инструмент общения с вашей аудиторией, который даст вам больше заказов, вернет потерянных клиентов и повысит лояльность ваших постоянных клиентов.</p>
 									</div>
 								</div>
 							</div>
@@ -413,7 +413,7 @@
 						<i class="ico i-lupa"></i>
 					</li>
 					<li>
-						<a href="#"><img src="img/prev-3.jpg" alt=""></a>
+						<a href="#" class="js-popup"><img src="img/prev-3.jpg" alt=""></a>
 						<a href="#" class="order js-popup">Заказать</a>
 					</li>
 					<li>

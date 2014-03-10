@@ -5,15 +5,26 @@ $(document).ready(function() {
 	     var tab_link = $(this).find("a");
 	     var tab_item = $(this).find("li");
 	     var tab_cont = $(this).parents(".js-tab-group").find(".js-tab-cont");
-	     tab_cont.hide();
-	     tab_item.first().addClass("is-active");
+	     tab_item.first().addClass("is-active"); // !
 	     $(this).parents(".js-tab-group2").find(".js-tab1").show();
 	     tab_link.on("click", function() {
 	        var index = $(this).attr("href");
 	        tab_item.removeClass("is-active");
 	        $(this).parent().addClass("is-active");
-	        tab_cont.hide();
-	        $(this).parents(".js-tab-group").find("."+index).show();
+
+
+	        tab_cont.removeClass("is-show");
+	        $(this).parents(".js-tab-group").find("."+index).addClass("is-show");
+
+
+	        // if ($(this).parents(".js-tab-group").find("."+index)){
+	        // 	$(this).addClass("is-show");
+	        // }
+	        // else{
+	        // 	$(this).removeClass("is-show");
+	        // }
+
+
 	        return false;
 	      });
 	   });
@@ -24,16 +35,18 @@ $(document).ready(function() {
 	}
 	tab();
 	// fancybox
-	$('.fancybox').fancybox();
+	$(".fancybox").fancybox({
+			openEffect	: 'none',
+			closeEffect	: 'none'
+		});
 	// popup
-	$('.js-popup').click(function(event) {
-		$('.popup_form').addClass('is-active');
+	$('.js-popup_form').click(function(event) {
+		$('.popup_send').addClass('is-active');
 		$('.overlay').addClass('is-active');
 		return false;
 	});
 	// popup 2
 	$('.js-popup_down').click(function(event) {
-		$('.popup_download').show();
 		$('.popup_download').addClass('is-active');
 		$('.overlay').addClass('is-active');
 		return false;
