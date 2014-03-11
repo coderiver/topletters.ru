@@ -22,7 +22,7 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 /*-------------------------  ------------------------- */
 /*-------------------------  mixins & extend & var ------------------------- */
 /*------------------------- general ------------------------- */
-body { font-size: 14px; font-family: "MyriadPro", sans-serif; line-height: 1.4; }
+body { font-size: 14px; font-family: "MyriadPro", sans-serif; line-height: 1.4; min-width: 1200px; }
 
 .out { padding: 20px 0 0; }
 
