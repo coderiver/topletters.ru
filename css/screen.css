@@ -263,14 +263,14 @@ body { font-size: 14px; font-family: "MyriadPro", sans-serif; line-height: 1.4; 
 .service-detail__item-6 { margin-left: 425px; }
 .service-detail__item-6:before { content: ""; width: 0px; height: 0px; border-style: solid; border-width: 0 0 31px 27px; border-color: transparent transparent #e6e6e6 transparent; position: absolute; top: -31px; left: 530px; }
 
-.benefits { max-width: 1366px; height: 702px; margin: 60px auto 55px; background: url(../img/benefits-bg.jpg) 0 0 no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; background-size: 100% 100%; color: white; }
+.benefits { min-width: 1150px; max-width: 1366px; height: 702px; margin: 60px auto 55px; background: url(../img/benefits-bg.jpg) 0 0 no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; background-size: 100% 100%; color: white; }
 .benefits .h3 { color: white; text-align: center; }
 .benefits ul { margin-top: 45px; text-align: center; }
 .benefits li { margin-bottom: 32px; display: inline-block; vertical-align: top; }
 .benefits li:before { content: ""; display: inline-block; }
 .benefits .benefits__descr { font-size: 16px; text-align: center; }
 
-.benefits-i { padding: 66px 60px 0; max-width: 1300px; margin: 0 auto; }
+.benefits-i { padding: 66px 60px 0; }
 
 .benefits__design { width: 124px; margin-right: 147px; }
 .benefits__design:before { background: url('../img/icons-sc255c32521.png') 0 -2729px no-repeat; width: 116px; height: 116px; }
