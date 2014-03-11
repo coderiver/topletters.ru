@@ -34,14 +34,13 @@ $(document).ready(function() {
 	   // 	});
 	}
 	tab();
+
 	// fancybox
-	$(".fancybox").fancybox({
-			openEffect	: 'none',
-			closeEffect	: 'none'
-		});
+	$('.fancybox').fancybox();
+
 	// popup
 	$('.js-popup_form').click(function(event) {
-		$('.popup_send').addClass('is-active');
+		$('.popup_request').addClass('is-active');
 		$('.overlay').addClass('is-active');
 		return false;
 	});

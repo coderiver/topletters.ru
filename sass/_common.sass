@@ -110,25 +110,30 @@ body
 	margin: 0 auto 0
 	display: block
 	text-align: center
+// .order
+// 	height: 56px
+// 	line-height: 56px
+// 	background: #723F7D
+// 	font-size: 18px
+// 	position: absolute
+// 	left: 0
+// 	right: 0
+// 	bottom: 35px
+// 	text-align: center
+// 	font-size: 18px
+// 	color: #fff
+// 	text-decoration: none
+// 	+transition(all linear 0.2s)
+// 	&:hover
+// 		background: #693C73
+// 		+transition(all linear 0.2s)
+// 	&:active
+// 		bottom: 36px
 .order
-	height: 56px
-	line-height: 56px
-	background: #723F7D
-	font-size: 18px
-	position: absolute
-	left: 0
-	right: 0
-	bottom: 35px
-	text-align: center
-	font-size: 18px
-	color: #fff
-	text-decoration: none
-	+transition(all linear 0.2s)
-	&:hover
-		background: #693C73
-		+transition(all linear 0.2s)
-	&:active
-		bottom: 36px
+	display: block
+	width: 209px
+	height: 302px
+	background: url(../img/prev-32.jpg) 0 0 no-repeat
 /*------------------------- forms -------------------------*/
 .input
 	width: 245px
@@ -244,7 +249,9 @@ body
 		color: $black
 		&.is-active
 			color: #fe4e7b
-
+.contacts__num
+	text-decoration: none
+	color: #000 
 /*------------------------- footer -------------------------*/
 .footer
 	padding: 70px 0 120px
@@ -329,6 +336,7 @@ body
 			background: #543C66 
 			@include box-shadow(none)
 .slider-meta
+	display: block
 	margin: 18px 0 -18px 50px 
 	text-align: center
 	font-size: 25px
@@ -336,8 +344,11 @@ body
 	position: relative
 	z-index: 666
 	.slider-meta__title
+		display: block
 		font-size: 55px
 		font-weight: normal
+	p
+		display: block
 .slider-i
 	width: 1312px
 	height: 555px
