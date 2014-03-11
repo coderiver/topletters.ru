@@ -71,8 +71,7 @@ $(document).ready(function() {
 
 
 	// validate
-	$(".form__input [name=tel]").mask("(999) 999-99-99");
-	$(".form__input [name=birthdate]").mask("99/99/9999");
+	// $(".input [name=tel]").mask("(999) 999-99-99");
 	$(".php-popup_request").validate({
     rules:{
       name:{
@@ -114,8 +113,6 @@ $(document).ready(function() {
         data: values,                    
         success: function (data, textStatus) { // вешаем свой обработчик на функцию success
         	$('.popup').addClass('thanks');
-         	$('.popup-wrap .popup__title').animate(500).html('');
-        	$('.popup-wrap #first_form').animate(500).html('Спасибо, скоро менеджер свяжется с Вами');
         } 
       });
     }

@@ -15,6 +15,8 @@ if($name == '' || $tel == '') {
 } 
 $name = mb_convert_encoding($name, "cp1251", "utf8");
 $adress = mb_convert_encoding($adress, "cp1251", "utf8");
+$tel = mb_convert_encoding($tel, "cp1251", "utf8");
+$site = mb_convert_encoding($site, "cp1251", "utf8");
 
 $to = "goshazvir@gmail.com";
 $headers ="From: <$to>\n";
