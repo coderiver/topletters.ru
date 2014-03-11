@@ -22,7 +22,7 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 /*-------------------------  ------------------------- */
 /*-------------------------  mixins & extend & var ------------------------- */
 /*------------------------- general ------------------------- */
-body { font-size: 14px; font-family: "MyriadPro", sans-serif; line-height: 1.4; min-width: 1150px; }
+body { font-size: 14px; font-family: "MyriadPro", sans-serif; line-height: 1.4; min-width: 1157px; }
 
 .out { padding: 20px 0 0; }
 
@@ -188,7 +188,7 @@ body { font-size: 14px; font-family: "MyriadPro", sans-serif; line-height: 1.4; 
 
 .slider-meta__in { text-align: center; }
 
-.slider-i { width: 1312px; height: 555px; padding: 88px 210px 100px 175px; margin: 0 auto; background: url(../img/slider-bg.jpg) 0 0 no-repeat; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+.slider-i { max-width: 1312px; height: 555px; padding: 88px 210px 100px 175px; margin: 0 auto; background: url(../img/slider-bg.jpg) 0 0 no-repeat; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 
 .slider__in { height: 555px; -webkit-box-shadow: 1px 2px 5px rgba(2, 2, 3, 0.5); -moz-box-shadow: 1px 2px 5px rgba(2, 2, 3, 0.5); box-shadow: 1px 2px 5px rgba(2, 2, 3, 0.5); background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #e6e6e6), color-stop(61.55%, #ffffff), color-stop(62.04%, #ffffff), color-stop(89.38%, #ffffff), color-stop(100%, #eeeeee)); background-image: -webkit-linear-gradient(bottom, #e6e6e6 0%, #ffffff 61.55%, #ffffff 62.04%, #ffffff 89.38%, #eeeeee 100%); background-image: -moz-linear-gradient(bottom, #e6e6e6 0%, #ffffff 61.55%, #ffffff 62.04%, #ffffff 89.38%, #eeeeee 100%); background-image: -o-linear-gradient(bottom, #e6e6e6 0%, #ffffff 61.55%, #ffffff 62.04%, #ffffff 89.38%, #eeeeee 100%); background-image: linear-gradient(bottom, #e6e6e6 0%, #ffffff 61.55%, #ffffff 62.04%, #ffffff 89.38%, #eeeeee 100%); }
 
@@ -205,7 +205,7 @@ body { font-size: 14px; font-family: "MyriadPro", sans-serif; line-height: 1.4; 
 
 .label { width: 545px; min-height: 145px; padding: 30px 100px 30px 50px; margin-bottom: 10px; background: url(../img/label.png) 0px 0px no-repeat; font-size: 28px; color: white; background-size: 100% 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-.service { margin-top: 52px; margin-bottom: 33px; padding: 0 83px; }
+.service { width: 1150px; margin: 52px auto 33px; padding: 0 83px; }
 .service .h3 { text-align: center; font-weight: normal; }
 .service ul { margin-top: 38px; padding: 0 65px; *zoom: 1; }
 .service ul:after { content: " "; display: table; clear: both; }
@@ -263,7 +263,7 @@ body { font-size: 14px; font-family: "MyriadPro", sans-serif; line-height: 1.4; 
 .service-detail__item-6 { margin-left: 425px; }
 .service-detail__item-6:before { content: ""; width: 0px; height: 0px; border-style: solid; border-width: 0 0 31px 27px; border-color: transparent transparent #e6e6e6 transparent; position: absolute; top: -31px; left: 530px; }
 
-.benefits { height: 702px; margin: 60px auto 55px; background: url(../img/benefits-bg.jpg) 50% 50% no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; background-size: 100% 100%; color: white; }
+.benefits { max-width: 1366px; height: 702px; margin: 60px auto 55px; background: url(../img/benefits-bg.jpg) 50% 50% no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; background-size: 100% 100%; color: white; }
 .benefits .h3 { color: white; text-align: center; }
 .benefits ul { margin-top: 45px; text-align: center; }
 .benefits li { margin-bottom: 32px; display: inline-block; vertical-align: top; }
