@@ -24,7 +24,7 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 /*------------------------- general ------------------------- */
 body { font-size: 14px; font-family: "MyriadPro", sans-serif; line-height: 1.4; min-width: 1150px; }
 
-.out { padding: 20px 0 0; }
+.out { max-width: 1150px; margin: 0 auto; padding: 20px 0 0; }
 
 .wrap { width: 1130px; margin: 0 auto; }
 
