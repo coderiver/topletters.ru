@@ -1,41 +1,52 @@
 <?php
- 
-if(isset($_POST['email'])) {
-    // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "goshazvir@gmail.com";
-    $email_subject = "Your email subject line";
- 
+error_reporting(E_ALL);
+ini_set('error_reporting', E_ALL);
 
-    $fio = $_POST['fio']; // required
-    $tel = $_POST['tel']; // required
-    $email = $_POST['email']; // required +
-    $site = $_POST['site']; // not required
- 
-    $email_message = "Form details below.\n\n";
- 
-    function clean_string($string) {
-      $bad = array("content-type","bcc:","to:","cc:","href");
-      return str_replace($bad,"",$string);
-    }
- 
-    $email_message .= "First Name: ".clean_string($fio)."\n";
-    $email_message .= "Last Name: ".clean_string($tel)."\n";
-    $email_message .= "Email: ".clean_string($email)."\n";
-    $email_message .= "Telephone: ".clean_string($site)."\n";
- 
-// create email headers
-$headers = 'From: '.$email."\r\n".
-'Reply-To: '.$email."\r\n" .
-'X-Mailer: PHP/' . phpversion();
-@mail($email_to, $email_subject, $email_message, $headers);  
-?>
- 
-<!-- include your own success html here -->
- 
-Thank you for contacting us. We will be in touch with you very soon.
- 
-<?php
+$name = @trim($_POST['name']);
+$site = @trim($_POST['site']);
+$adress = @trim($_POST['adress']);
+$tel = @trim($_POST['tel']);
 
+header('Content-Type: application/json; charset=utf-8');
+
+if($name == '' || $tel == '') {
+    echo json_encode(array('success'    => false));
+    exit;
+} 
+$name = mb_convert_encoding($name, "cp1251", "utf8");
+$adress = mb_convert_encoding($adress, "cp1251", "utf8");
+
+$to = "goshazvir@gmail.com";
+$headers ="From: <$to>\n";
+$headers.="X-Mailer: PHP/".phpversion()."\n";
+$headers.="Content-Type: text/html; charset=cp1251";
+$subject = "Заявка на: ";
+$message = "
+<table>
+<tr>
+    <td><strong>Имя:</strong></td>
+    <td> $name </td>
+</tr>
+<tr>
+    <td><strong>Телефон:</strong></td>
+    <td> $tel </td>
+</tr>
+<tr>
+    <td><strong>Почта:</strong></td>
+    <td> $adress </td>
+</tr>
+<tr>
+    <td><strong>Сайт:</strong></td>
+    <td> $site </td>
+</tr>
+</table>";
+$send = mail($to, $subject, $message, $headers);
+if ($send == 'true')
+{
+    echo json_encode(array('success'    => true));
+    exit;
+} else {
+    echo json_encode(array('success'    => false));
+    exit;
 }
-
 ?>

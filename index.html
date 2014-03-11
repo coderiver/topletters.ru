@@ -10,6 +10,7 @@
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery.tools.min.js"></script>
+	<script src="js/jquery.validate.js"></script>
 	<script src="js/cycle.js"></script>
 	<script src="js/jquery.fancybox.js"></script>
 	<script src="js/common.js"></script>
@@ -24,9 +25,9 @@
 			<div class="popup__form">
 				<h2 class="popup__title">Начнем работу</h2>
 				<div class="popup__content">
-					<form action="/mail.php">
+					<form action="/mail.php" class="php-popup_request">
 						<div class="popup__row popup-name">
-							<input type="text" class="input input_popup input_name" placeholder="Имя" name="fio">
+							<input type="text" class="input input_popup input_name" placeholder="Имя" name="name">
 							<i class="ico i-ico51"></i>
 						</div>
 						<div class="popup__row popup-tel">
@@ -34,7 +35,7 @@
 							<i class="ico i-ico52"></i>
 						</div>
 						<div class="popup__row popup-mail">
-							<input type="text" class="input input_popup input_name" placeholder="E-mail" name="email">
+							<input type="text" class="input input_popup input_name" placeholder="E-mail" name="adress">
 							<i class="ico i-ico53"></i>
 						</div>
 						<div class="popup__row popup-site">
