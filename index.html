@@ -12,8 +12,8 @@
 	<script src="js/jquery.tools.min.js"></script>
 	<script src="js/cycle.js"></script>
 	<script src="js/jquery.fancybox.js"></script>
+	<script src="js/jquery.validate222.js"></script>
 	<script src="js/common.js"></script>
-	<script src="js/jquery.validate.js"></script>
 </head>
 <body>
 
@@ -25,21 +25,22 @@
 			<div class="popup__form">
 				<h2 class="popup__title">Начнем работу</h2>
 				<div class="popup__content">
-					<form action="/mail.php" class="php-popup_request">
+					<form action="/mail.php" class="php-popup_request" method="post">
+						<input type="hidden" name="service" value="test my">
 						<div class="popup__row popup-name">
-							<input type="text" class="input input_popup input_name" placeholder="Имя" name="name">
+							<input  class="input input_popup" placeholder="Имя" type="text" name="name" required>
 							<i class="ico i-ico51"></i>
 						</div>
 						<div class="popup__row popup-tel">
-							<input type="text" class="input input_popup input_name" placeholder="Телефон" name="tel">
+							<input class="input input_popup" placeholder="Телефон" name="tel">
 							<i class="ico i-ico52"></i>
 						</div>
 						<div class="popup__row popup-mail">
-							<input type="text" class="input input_popup input_name" placeholder="E-mail" name="adress">
+							<input  class="input input_popup" placeholder="E-mail" type="email" name="adress" required>
 							<i class="ico i-ico53"></i>
 						</div>
 						<div class="popup__row popup-site">
-							<input type="text" class="input input_popup input_name" placeholder="Ваш сайт" name="site">
+							<input class="input input_popup" placeholder="Ваш сайт" type="url" name="site">
 							<i class="ico i-ico54"></i>
 						</div>
 						<button type="submit" class="popup__send js-send">ОТПРАВИТЬ ЗАЯВКУ</button>
@@ -60,19 +61,22 @@
 			<div class="popup__form">
 				<h2 class="popup__title">Скачать презентацию</h2>
 				<div class="popup__content">
-					<div class="popup__row popup-name">
-						<input type="text" class="input input_popup input_name" placeholder="Имя" name="fio">
-						<i class="ico i-ico51"></i>
-					</div>
-					<div class="popup__row popup-mail">
-						<input type="text" class="input input_popup input_name" placeholder="E-mail" name="email">
-						<i class="ico i-ico53"></i>
-					</div>
-					<div class="popup__row popup-site">
-						<input type="text" class="input input_popup input_name" placeholder="Ваш сайт" name="site">
-						<i class="ico i-ico54"></i>
-					</div>
-					<a href="download.php?url=TopLetters.pdf" rel="noindex" class="popup__send">СКАЧАТЬ</a>
+					<form action="/mail.php" class="php-popup_request" method="post">
+						<div class="popup__row popup-name">
+							<input type="text" class="input input_popup" placeholder="Имя" name="name" required>
+							<i class="ico i-ico51"></i>
+						</div>
+						<div class="popup__row popup-mail">
+							<input type="email" class="input input_popup" placeholder="E-mail" name="adress" required>
+							<i class="ico i-ico53"></i>
+						</div>
+						<div class="popup__row popup-site">
+							<input type="url" class="input input_popup" placeholder="Ваш сайт" name="site">
+							<i class="ico i-ico54"></i>
+						</div>
+						<a href="download.php?url=TopLetters.pdf" rel="noindex" class="popup__send">СКАЧАТЬ</a>
+						<button type="submit" class="button-send"></button>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -117,7 +121,7 @@
 					<div class="slider__info">
 						<div class="label">Узнайте на что обратить внимание в первую очередь.</div>
 						<div class="slider__advice">
-							<a href="#" class="btn btn-red js-popup js-popup_form">РЕшить проблему</a>
+							<a href="#" class="btn btn-red js-popup js-popup_form js-data" data="решить проблему">РЕшить проблему</a>
 							<span class="slider__advice-note">*Бесплатно</span>
 						</div>
 					</div>
@@ -127,7 +131,7 @@
 					<div class="slider__info">
 						<div class="label">Узнайте на что обратить внимание в первую очередь. Уникальная возможность не допустить ошибок!</div>
 						<div class="slider__advice">
-							<a href="#" class="btn btn-red js-popup js-popup_form">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+							<a href="#" class="btn btn-red js-popup js-popup_form js-data" data="получить консультацию">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
 							<span class="slider__advice-note">*Бесплатно</span> 
 						</div>
 					</div>
@@ -207,7 +211,7 @@
 					<li>В итоговом отчете вы увидите оценку своих E-mail маркетинговых процессов и советы по устранению «слабых» мест. Вы также можете задать специалистам компании конкретные вопросы, на которые хотели бы получить ответ.</li>
 				</ul>
 				<p><i>Плюсы и минусы емейл-рассылки не всегда очевидны для ее владельцев. Закажите профессиональную оценку качества рассылки и рекомендации по ее улучшению.</i></p>
-				<div class="btn btn-red btn_send js-popup js-popup_form">оставить заявку</div>
+				<div class="btn btn-red btn_send js-popup js-popup_form js-data" data="Аудит E-mail маркетинга">оставить заявку</div>
 			</div>
 			<div class="service-detail__item service-detail__item-2 js-tab-cont js-tab2">
 				<h3 class="service-detail__title">E-mail маркетинг под ключ</h3>
@@ -222,7 +226,7 @@
 					<li>Оптимизацию рассыло</li>
 				</ul>
 				<p>Вам нужно что-то еще? Это мы тоже делаем! Под ключ.</p>
-				<div class="btn btn-red btn_send js-popup js-popup_form">оставить заявку</div>
+				<div class="btn btn-red btn_send js-popup js-popup_form js-data" data="E-mail маркетинг под ключ">оставить заявку</div>
 			</div>
 			<div class="service-detail__item service-detail__item-3 js-tab-cont js-tab3">
 				<h3 class="service-detail__title">Создание письма</h3>
@@ -235,7 +239,7 @@
 					<li>Верстальщик, который дизайн превратит в полноценное письмо. Проследит, чтобы ваше письмо открылось во всех браузерах и почтовых клиентах, а также проверит, что письмо корректно отображается на всех мобильных устройствах.</li>
 				</ul>
 				<p>В итоге над вашим письмом поработают четыре профессионала своего дела и только при таком условие вы получаете письмо, которое открывают, читают, которое улучшает доверие к вам и клиента ничего не остается, как сделать заказ.</p>
-				<div class="btn btn-red btn_send js-popup js-popup_form">оставить заявку</div>
+				<div class="btn btn-red btn_send js-popup js-popup_form js-data" data="Создание письма">оставить заявку</div>
 			</div>
 			<div class="service-detail__item service-detail__item-4 js-tab-cont js-tab4">
 				<h3 class="service-detail__title">Работа с базой подписчиков</h3>
@@ -249,7 +253,7 @@
 					<li>Возвращаем пользователей, которые утратили интерес.</li>
 				</ul>
 				<p>Результат нашей работы: Эффективно сегментированная база, которая увеличит доходность от E-mail маркетинга в несколько раз, за счет целевой рассылки каждому сегменту. </p>
-				<div class="btn btn-red btn_send js-popup js-popup_form">оставить заявку</div>
+				<div class="btn btn-red btn_send js-popup js-popup_form js-data" data="Работа с базой подписчиков">оставить заявку</div>
 			</div>
 			<div class="service-detail__item service-detail__item-5 js-tab-cont js-tab5">
 				<h3 class="service-detail__title">Автоматизация и сегментация рассылки</h3>
@@ -262,7 +266,7 @@
 					<li>Как персонализировать рассылку?</li>
 				</ul>
 				<p>Список этих вопросов можно продолжить. Никто лучше вас не знает предпочтений и интересов вашей целевой аудитории, никто лучше вас не знает маркетинговых планов вашей компании, но именно в сочетании с профессиональными знаниями опытных специалистов в области емейл-маркетинга они могут и должны превратить емейл-рассылку в эффективный канал коммуникации с пользователем.</p>
-				<div class="btn btn-red btn_send js-popup js-popup_form">оставить заявку</div>
+				<div class="btn btn-red btn_send js-popup js-popup_form js-data" data="Автоматизация и сегментация рассылки">оставить заявку</div>
 			</div>
 			<div class="service-detail__item service-detail__item-6 js-tab-cont js-tab6">
 				<h3 class="service-detail__title">API интеграция с CRM</h3>
@@ -274,7 +278,7 @@
 					<li>Полная интеграция email-маркетинга с вашим бизнесом позволит вам понимать ROI данного канала, и его значение вас приятно удивит!</li>
 				</ul>
 				<p>А вы знаете, что всего 7% компаний в России имеют полностью интегрированный в бизнес email-маркетинг? Хотите быть среди лидеров? </p>
-				<div class="btn btn-red btn_send js-popup js-popup_form">оставить заявку</div>
+				<div class="btn btn-red btn_send js-popup js-popup_form js-data" data="API интеграция с CRM">оставить заявку</div>
 			</div>
 		</div>
 		<!-- / .service-detail -->
@@ -416,7 +420,7 @@
 						<i class="ico i-lupa"></i>
 					</li>
 					<li>
-						<a href="#" class="js-popup_form order"></a>
+						<a href="#" class="js-popup_form order js-data" data="Заказать письмо"></a>
 <!-- 						<a href="#" class="order js-popup">Заказать</a> -->
 					</li>
 					<li>
@@ -540,7 +544,7 @@
 			<h4 class="h4">Напишите нам</h4>
 			<p>Если Вы дочитали до этого момента,  значит <br>Вам необходима наша помощь. <br>От увеличения дохода Вас отделяет один шаг.</p>
 			<p>Позвоните или напишите нам, и результат не <br>заставит себя ждать.</p>
-			<p class="footer__contact">E-mail: <a href="#">ivan@toplettersru</a></p>
+			<p class="footer__contact">E-mail: <a href="mailto:ivan@toplettersru">ivan@toplettersru</a></p>
 			<p class="footer__contact">Телефон: <a href="#">+7(495)790-91-72</a></p>
 		</div>
 		<div class="footer__form">

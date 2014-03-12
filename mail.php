@@ -6,6 +6,7 @@ $name = @trim($_POST['name']);
 $site = @trim($_POST['site']);
 $adress = @trim($_POST['adress']);
 $tel = @trim($_POST['tel']);
+$service = @trim($_POST['service']);
 
 header('Content-Type: application/json; charset=utf-8');
 
@@ -25,6 +26,10 @@ $headers.="Content-Type: text/html; charset=cp1251";
 $subject = "Заявка на: ";
 $message = "
 <table>
+<tr>
+    <td><strong>Услуга:</strong></td>
+    <td> $service </td>
+</tr>
 <tr>
     <td><strong>Имя:</strong></td>
     <td> $name </td>

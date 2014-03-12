@@ -928,6 +928,11 @@ body
 		height: 320px
 		.popup__send
 			bottom: 65px
+	&.thanks
+		.popup__form
+			display: none
+		.popup__sucess
+			display: block
 	.popup-i
 		position: relative
 		padding: 15px 40px
@@ -1010,6 +1015,24 @@ body
 	display: none
 	&.is-show
 		display: block
+
+label.error
+	position: absolute
+	right: 15px
+	bottom: 13px
+	color: #a5adbe
+
+.button-send
+	position: absolute
+	width: 100%
+	height: 66px
+	left: 0
+	bottom: 65px
+	z-index: -1 // !
+	+opacity(0)
+
+	
+
 
 	
 

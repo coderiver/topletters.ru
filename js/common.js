@@ -56,33 +56,26 @@ $(document).ready(function() {
 		return false;
 	});
 	// 
-	$('.js-send').click(function(event) {
-		$(this).parents().find(".popup__form").hide();
-		$(this).parents().find(".popup__sucess").show();
-	});
+
+
+
 	// 
 	$('.js-close').click(function(event) {
 		$('.popup').removeClass('is-active');
+		$('.popup').removeClass('thanks');
 		$('.overlay').removeClass('is-active');
-		$(this).parents().find(".popup__form").show();
-		$(this).parents().find(".popup__sucess").hide();
 	});
 
 
 
 	// validate
-	// $(".input [name=tel]").mask("(999) 999-99-99");
 	$(".php-popup_request").validate({
     rules:{
       name:{
         required: true,
-        minlength: 4,
-        maxlength: 40,
       },
       adress:{
         required: true,
-        minlength: 4,
-        maxlength: 40,
       },
       tel:{
         // required: true
@@ -90,16 +83,13 @@ $(document).ready(function() {
     },
     messages:{
       name:{
-        required: "Это поле обязательно для заполнения",
-        minlength: "Имя должно быть минимум 4 символа",
-        maxlength: "Максимальное число символов - 40",
+        required: "Заполните это поле",
       },
       adress:{
-        required: "Это поле обязательно для заполнения",
-        minlength: "Имя должно быть минимум 4 символа",
-        maxlength: "Максимальное число символов - 40",
+        required: "Заполните это поле",
       },
     },
+
     submitHandler: function(form) {
       var values = {};
 
@@ -116,6 +106,7 @@ $(document).ready(function() {
         } 
       });
     }
+
 	});
 
 });
