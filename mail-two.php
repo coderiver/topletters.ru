@@ -14,7 +14,7 @@ $adress2 = mb_convert_encoding($adress2, "cp1251", "utf8");
 $site2 = mb_convert_encoding($site2, "cp1251", "utf8");
 $service2 = mb_convert_encoding($service2, "cp1251", "utf8");
 
-$to = "akella.a@gmail.com,goshazvir@gmail.com";
+$to = "goshazvir@gmail.com";
 $headers ="From: <$to>\n";
 $headers.="X-Mailer: PHP/".phpversion()."\n";
 $headers.="Content-Type: text/html; charset=cp1251";

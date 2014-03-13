@@ -290,7 +290,7 @@ body { font-size: 14px; font-family: "MyriadPro", sans-serif; line-height: 1.4; 
 .benefits__idea { width: 146px; }
 .benefits__idea:before { background: url('../img/icons-sc255c32521.png') 0 -2148px no-repeat; width: 117px; height: 116px; }
 
-.team { width: 1012px; margin: 0 auto 60px; overflow: hidden; color: #333333; }
+.team { width: 1012px; margin: 0 auto 60px; overflow: hidden; font-size: 16px; color: #333333; }
 
 .team__title { margin-bottom: 20px; position: relative; }
 .team__title span { display: inline-block; padding-right: 20px; }
@@ -380,6 +380,10 @@ body { font-size: 14px; font-family: "MyriadPro", sans-serif; line-height: 1.4; 
 .popup.is-active { opacity: 1; z-index: 1001; -webkit-transition: all 0.2s ease-in; -moz-transition: all 0.2s ease-in; -o-transition: all 0.2s ease-in; transition: all 0.2s ease-in; }
 .popup.popup_download { height: 320px; }
 .popup.popup_download .popup__send { bottom: 65px; }
+.popup.popup_download .popup__sucess { height: 290px; }
+.popup.popup_download .popup__sucess:before { top: 0; }
+.popup.popup_download .popup__sucess .popup__sucess-info { padding-top: 130px; }
+.popup.popup_download .popup__sucess .popup__send { bottom: -15px; }
 .popup.thanks .popup__form { display: none; }
 .popup.thanks .popup__sucess { display: block; }
 .popup .popup-i { position: relative; padding: 15px 40px; }

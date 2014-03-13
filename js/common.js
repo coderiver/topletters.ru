@@ -61,16 +61,12 @@ $(document).ready(function() {
 	});
 	// 
 
-
-
 	// 
 	$('.js-close').click(function(event) {
 		$('.popup').removeClass('is-active');
 		$('.popup').removeClass('thanks');
 		$('.overlay').removeClass('is-active');
 	});
-
-
 
 	// validate
 	$(".php-popup_request").validate({
@@ -101,7 +97,7 @@ $(document).ready(function() {
         values[field.name] = field.value;
       });
       $.ajax({
-        url: '/tt/mail.php',             // указываем URL и
+        url: '/mail.php',             // указываем URL и
         dataType : "json",            // тип загружаемых данных
         type: "POST",
         data: values,                    
@@ -112,7 +108,6 @@ $(document).ready(function() {
     }
 	});
 
-
 	$(".php-popup_request2").validate({
     rules:{
       name:{
@@ -120,9 +115,6 @@ $(document).ready(function() {
       },
       adress:{
         required: true,
-      },
-      tel:{
-        // required: true
       },
     },
     messages:{
@@ -135,7 +127,6 @@ $(document).ready(function() {
     },
 
     submitHandler: function(form_m) {
-    	//console.log(form);
     	console.log(form_m);
       var values = {};
 
@@ -143,12 +134,12 @@ $(document).ready(function() {
         values[field.name] = field.value;
       });
       $.ajax({
-        url: '/tt/mail-two.php',             // указываем URL и
+        url: '/mail-two.php',             // указываем URL и
         dataType : "json",            // тип загружаемых данных
         type: "POST",
         data: values,                    
         success: function (data, textStatus) { // вешаем свой обработчик на функцию success
-        	$('.php-popup_request2').addClass('thanks');
+        	$('.popup_download').addClass('thanks');
         } 
       });
     }
@@ -161,16 +152,8 @@ $(document).ready(function() {
 	});
 
 
-
-		// link to button
-		// $(function(){
-		// 	$('.php-popup_request2').submit(function () { 
-		// 	    $('.popup__title').append('<code>submit</code> JavaScript event triggered<br />');
-		// 	    return false; // disable submit 
-		// 	  });
-
-		// 	$('.js-button-submit').click(function() {
-		// 		$(".php-popup_request2").submit();
-		// 	});
-		// });
+		// to download
+		$( ".js-trigger-download" ).click(function() {
+		  $( ".download-file" ).trigger( "click" );
+		});
 });
