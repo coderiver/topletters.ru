@@ -2,7 +2,6 @@
 error_reporting(E_ALL);
 ini_set('error_reporting', E_ALL);
 
-
 $name2 = @trim($_POST['name2']);
 $adress2 = @trim($_POST['adress2']);
 $site2 = @trim($_POST['site2']);

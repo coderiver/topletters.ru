@@ -102,7 +102,7 @@ $(document).ready(function() {
         type: "POST",
         data: values,                    
         success: function (data, textStatus) { // вешаем свой обработчик на функцию success
-        	$('.popup').addClass('thanks');
+        	$('.popup_request').addClass('thanks');
         } 
       });
     }
@@ -137,12 +137,12 @@ $(document).ready(function() {
         values[field.name] = field.value;
       });
       $.ajax({
-        url: '/mail.php',             // указываем URL и
+        url: '/mail2.php',             // указываем URL и
         dataType : "json",            // тип загружаемых данных
         type: "POST",
         data: values,                    
         success: function (data, textStatus) { // вешаем свой обработчик на функцию success
-        	$('.popup').addClass('thanks');
+        	$('.php-popup_request2').addClass('thanks');
         } 
       });
     }
@@ -153,4 +153,18 @@ $(document).ready(function() {
 		var getAttr = $(this).attr("data");
 		$(".get-attr").val(getAttr);
 	});
+
+
+
+		// link to button
+		// $(function(){
+		// 	$('.php-popup_request2').submit(function () { 
+		// 	    $('.popup__title').append('<code>submit</code> JavaScript event triggered<br />');
+		// 	    return false; // disable submit 
+		// 	  });
+
+		// 	$('.js-button-submit').click(function() {
+		// 		$(".php-popup_request2").submit();
+		// 	});
+		// });
 });
