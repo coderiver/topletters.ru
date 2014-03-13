@@ -151,9 +151,4 @@ $(document).ready(function() {
 		$(".get-attr").val(getAttr);
 	});
 
-
-		// to download
-		$( ".js-trigger-download" ).click(function() {
-		  $( ".download-file" ).trigger( "click" );
-		});
 });
