@@ -137,7 +137,7 @@ $(document).ready(function() {
         values[field.name] = field.value;
       });
       $.ajax({
-        url: '/mail2.php',             // указываем URL и
+        url: '/mail-two.php',             // указываем URL и
         dataType : "json",            // тип загружаемых данных
         type: "POST",
         data: values,                    
