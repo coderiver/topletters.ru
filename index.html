@@ -61,7 +61,8 @@
 			<div class="popup__form">
 				<h2 class="popup__title">Скачать презентацию</h2>
 				<div class="popup__content">
-					<form action="/mail.php" class="php-popup_request" method="post">
+					<form action="/mail2.php" class="php-popup_request2" method="post">
+						<input type="hidden" name="service2" value="test 2222222222222 my">
 						<div class="popup__row popup-name">
 							<input type="text" class="input input_popup" placeholder="Имя" name="name" required>
 							<i class="ico i-ico51"></i>
@@ -74,8 +75,8 @@
 							<input type="url" class="input input_popup" placeholder="Ваш сайт" name="site">
 							<i class="ico i-ico54"></i>
 						</div>
-						<a href="download.php?url=TopLetters.pdf" rel="noindex" class="popup__send">СКАЧАТЬ</a>
-						<button type="submit" class="button-send"></button>
+<!-- 						<a href="download.php?url=TopLetters.pdf" rel="noindex" class="popup__send">СКАЧАТЬ</a> -->
+						<button type="submit" class="popup__send">СКАЧАТЬ</button>
 					</form>
 				</div>
 			</div>

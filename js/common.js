@@ -106,7 +106,46 @@ $(document).ready(function() {
         } 
       });
     }
+	});
 
+
+	$(".php-popup_request2").validate({
+    rules:{
+      name:{
+        required: true,
+      },
+      adress:{
+        required: true,
+      },
+      tel:{
+        // required: true
+      },
+    },
+    messages:{
+      name:{
+        required: "Заполните это поле",
+      },
+      adress:{
+        required: "Заполните это поле",
+      },
+    },
+
+    submitHandler: function(form_m) {
+      var values = {};
+
+      $.each($(form).serializeArray(), function(i, field) {
+        values[field.name] = field.value;
+      });
+      $.ajax({
+        url: '/mail.php',             // указываем URL и
+        dataType : "json",            // тип загружаемых данных
+        type: "POST",
+        data: values,                    
+        success: function (data, textStatus) { // вешаем свой обработчик на функцию success
+        	$('.popup').addClass('thanks');
+        } 
+      });
+    }
 	});
 
 });
