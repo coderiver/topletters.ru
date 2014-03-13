@@ -9,33 +9,20 @@ $(document).ready(function() {
 	     var tab_link = $(this).find("a");
 	     var tab_item = $(this).find("li");
 	     var tab_cont = $(this).parents(".js-tab-group").find(".js-tab-cont");
-	     tab_item.first().addClass("is-active"); // !
-	     // $(this).parents(".js-tab-group2").find(".js-tab1").show();
 	     tab_link.on("click", function() {
 	        var index = $(this).attr("href");
-	        tab_item.removeClass("is-active");
-	        $(this).parent().addClass("is-active");
 
-
-	        tab_cont.removeClass("is-show");
-	        $(this).parents(".js-tab-group").find("."+index).addClass("is-show");
-
-
-	        // if ($(this).parents(".js-tab-group").find("."+index)){
-	        // 	$(this).addClass("is-show");
-	        // }
-	        // else{
-	        // 	$(this).removeClass("is-show");
-	        // }
-
+	        if ($(this).parents(".js-tab-group").find("."+index).hasClass("is-show")) {
+	        	$(this).parents(".js-tab-group").find("."+index).removeClass("is-show");
+	        }
+	        else {
+	        	tab_cont.removeClass("is-show");
+	        	$(this).parents(".js-tab-group").find("."+index).addClass("is-show");
+	        }
 
 	        return false;
 	      });
 	   });
-
-	   // $(".js-tab").each(function(){
-
-	   // 	});
 	}
 	tab();
 
