@@ -148,4 +148,9 @@ $(document).ready(function() {
     }
 	});
 
+	// get attr
+	$('.js-data').click(function(event) {
+		var getAttr = $(this).attr("data");
+		$(".get-attr").val(getAttr);
+	});
 });
