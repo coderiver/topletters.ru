@@ -1,4 +1,8 @@
 $(document).ready(function() {
+
+	$("form").submit(function (e) {
+      e.preventDefault();
+  })
 	// tab
 	function tab() {
 	   $(".js-tab").each(function(){
@@ -97,7 +101,7 @@ $(document).ready(function() {
         values[field.name] = field.value;
       });
       $.ajax({
-        url: '/mail.php',             // указываем URL и
+        url: '/tt/mail.php',             // указываем URL и
         dataType : "json",            // тип загружаемых данных
         type: "POST",
         data: values,                    
@@ -131,13 +135,15 @@ $(document).ready(function() {
     },
 
     submitHandler: function(form_m) {
+    	//console.log(form);
+    	console.log(form_m);
       var values = {};
 
-      $.each($(form).serializeArray(), function(i, field) {
+      $.each($(form_m).serializeArray(), function(i, field) {
         values[field.name] = field.value;
       });
       $.ajax({
-        url: '/mail-two.php',             // указываем URL и
+        url: '/tt/mail-two.php',             // указываем URL и
         dataType : "json",            // тип загружаемых данных
         type: "POST",
         data: values,                    
