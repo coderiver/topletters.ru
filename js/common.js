@@ -12,6 +12,9 @@ $(document).ready(function() {
 	     tab_link.on("click", function() {
 	        var index = $(this).attr("href");
 
+          tab_item.removeClass("is-active");
+          $(this).parent().addClass("is-active");
+
 	        if ($(this).parents(".js-tab-group").find("."+index).hasClass("is-show")) {
 	        	$(this).parents(".js-tab-group").find("."+index).removeClass("is-show");
 	        }
