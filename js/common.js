@@ -100,18 +100,18 @@ $(document).ready(function() {
 
 	$(".php-popup_request2").validate({
     rules:{
-      name:{
+      name2:{
         required: true,
       },
-      adress:{
+      adress2:{
         required: true,
       },
     },
     messages:{
-      name:{
+      name2:{
         required: "Заполните это поле",
       },
-      adress:{
+      adress2:{
         required: "Заполните это поле",
       },
     },
@@ -134,6 +134,48 @@ $(document).ready(function() {
       });
     }
 	});
+
+    $(".php-popup_request3").validate({
+      rules:{
+        name3:{
+          required: true,
+        },
+        adress3:{
+          required: true,
+        },
+      },
+      messages:{
+        name3:{
+          required: "Заполните это поле",
+        },
+        adress3:{
+          required: "Заполните это поле",
+        },
+        mess:{
+          required: "Заполните это поле",
+        },
+      },
+
+      submitHandler: function(form_mm) {
+        console.log(form_mm);
+        var values = {};
+
+        $.each($(form_mm).serializeArray(), function(i, field) {
+          values[field.name] = field.value;
+        });
+        $.ajax({
+          url: '/mail-tree.php',             // указываем URL и
+          dataType : "json",            // тип загружаемых данных
+          type: "POST",
+          data: values,                    
+          success: function (data, textStatus) { // вешаем свой обработчик на функцию success
+            $('.popup_send').addClass('is-active');
+            $('.overlay').addClass('is-active');
+          } 
+        });
+      }
+    });
+
 
 	// get attr
 	$('.js-data').click(function(event) {

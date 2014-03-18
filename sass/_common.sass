@@ -295,6 +295,11 @@ body
 	.footer__form-row
 		margin-bottom: 20px
 		+clr
+		&.footer__form-row_textarea
+			position: relative
+			.error
+				bottom: auto
+				top: 35px
 	.footer__form-label
 		float: left
 		&.footer__form-label_r
@@ -306,7 +311,9 @@ body
 		text-align: center
 	.footer__form-label 
 		display: block
-
+		position: relative
+		.error
+			bottom: 4px
 /*------------------------- page -------------------------*/
 // slider
 .slider
@@ -938,6 +945,9 @@ body
 				padding-top: 130px
 			.popup__send
 				bottom: -15px
+	&.popup_send
+		.popup__sucess
+			display: block
 	&.thanks
 		.popup__form
 			display: none

@@ -75,7 +75,7 @@
 							<input type="text" class="input input_popup" placeholder="Ваш сайт" name="site2">
 							<i class="ico i-ico54"></i>
 						</div>
-						<button href="" type="submit" class="popup__send">СКАЧАТЬ</button>
+						<button type="submit" class="popup__send">СКАЧАТЬ</button>
 					</form>
 				</div>
 			</div>
@@ -88,7 +88,17 @@
 			</div>
 		</div>
 	</div>
-
+	<div class="popup popup_send">
+		<div class="popup-i">
+			<div class="popup__sucess">
+				<div class="popup__sucess-info">
+					<p>Спасибо за то, что выбрали нас.</p>
+					<p>Совсем скоро наш менеджер свяжется с вами!</p>
+				</div>
+				<a href="#" class="popup__send js-close">Закрыть</a>
+			</div>
+		</div>
+	</div>
 	<!-- BEGIN header -->
 	<div class="header wrap">
 		<div class="header-left">
@@ -552,31 +562,33 @@
 			<h4 class="h4">Напишите нам</h4>
 			<p>Если Вы дочитали до этого момента,  значит <br>Вам необходима наша помощь. <br>От увеличения дохода Вас отделяет один шаг.</p>
 			<p>Позвоните или напишите нам, и результат не <br>заставит себя ждать.</p>
-			<p class="footer__contact">E-mail: <a href="mailto:ivan@toplettersru">ivan@toplettersru</a></p>
+			<p class="footer__contact">E-mail: <a href="mailto:ivan@topletters.ru">ivan@topletters.ru</a></p>
 			<p class="footer__contact">Телефон: <a href="#">+7(495)790-91-72</a></p>
 		</div>
 		<div class="footer__form">
 			<h4 class="footer__form-title">Контакты</h4>
 			<div class="footer__form-in">
-				<div class="footer__form-row">
-					<div class="footer__form-label">
-						<label for="1" class="form-label">Ваше имя</label>
-						<input type="text" class="input" id="1">
+				<form action="/mail-tree.php" class="php-popup_request3" method="post">
+					<div class="footer__form-row">
+						<div class="footer__form-label">
+							<label for="1" class="form-label">Ваше имя</label>
+							<input type="text" class="input" id="1" name="name3" required>
+						</div>
+						<div class="footer__form-label footer__form-label_r">
+							<label for="2" class="form-label">Ваш e-mail</label>
+							<input type="email" class="input" id="2" name="adress3" required>
+						</div>
 					</div>
-					<div class="footer__form-label footer__form-label_r">
-						<label for="2" class="form-label">Ваш e-mail</label>
-						<input type="text" class="input" id="2">
+					<div class="footer__form-row footer__form-row_textarea">
+						<div class="footer__form-label">
+							<label for="3" class="form-label">Сообщение</label>
+							<textarea class="textarea" id="3" name="mess" required></textarea>
+						</div>
 					</div>
-				</div>
-				<div class="footer__form-row">
-					<div class="footer__form-label">
-						<label for="3" class="form-label">Сообщение</label>
-						<textarea class="textarea" id="3"></textarea>
+					<div class="footer__form-row">
+						<button type="submit" class="btn btn-red">отправить</button>
 					</div>
-				</div>
-				<div class="footer__form-row">
-					<a href="#" class="btn btn-red">отправить</a>
-				</div>
+				</form>
 			</div>
 		</div>
 	</div>
